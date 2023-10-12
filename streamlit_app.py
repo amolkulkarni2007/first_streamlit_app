@@ -1,4 +1,6 @@
-streamlit.header("Fruityvice Fruit Advice!")import streamlit
+import streamlit
+
+streamlit.header("Fruityvice Fruit Advice!")
 streamlit.title('My parents new healthy Diner')
 
 streamlit.header('🥣  Breakfast Menu')
@@ -20,7 +22,7 @@ fruis_to_show=my_fruit_list.loc[fruits_selected]
 # Display the table on the page.
 streamlit.dataframe(fruis_to_show)
 
-streamlit.header('Amol')
+streamlit.header("Fruityvice Fruit Advice!")
 
 #New section to display fruityvice api response
 import requests
