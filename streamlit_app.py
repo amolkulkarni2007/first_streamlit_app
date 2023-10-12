@@ -24,9 +24,12 @@ streamlit.dataframe(fruis_to_show)
 
 streamlit.header("Fruityvice Fruit Advice!")
 
+fruit_choise = streamlit.text_input('What fruit would you like infromation about"','kiwi')
+streamlit.write('The use entered', fruit_choise)
+
 #New section to display fruityvice api response
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choise)
 #streamlit.text(fruityvice_response.json())
 
 # convert the json to table format
