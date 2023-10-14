@@ -31,18 +31,18 @@ streamlit.header("Fruityvice Fruit Advice!")
 try:
   fruit_choise = streamlit.text_input("What fruit would you like infromation about?")
   streamlit.write('The use entered', fruit_choise)
-if not fruit_choise:
-  streamlit.error("Please select a fruit to get information")
-else
-  #New section to display fruityvice api response
-  #import requests
-  fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choise)
-  #streamlit.text(fruityvice_response.json())
-
-  # convert the json to table format
-  fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-  # display the table format
-  streamlit.dataframe(fruityvice_normalized)
+  if not fruit_choise:
+    streamlit.error("Please select a fruit to get information")
+  else
+    #New section to display fruityvice api response
+    #import requests
+    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choise)
+    #streamlit.text(fruityvice_response.json())
+  
+    # convert the json to table format
+    fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+    # display the table format
+    streamlit.dataframe(fruityvice_normalized)
 
 except URLError as e:
   streamlit.error()
