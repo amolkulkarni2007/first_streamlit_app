@@ -37,7 +37,7 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # display the table format
 streamlit.dataframe(fruityvice_normalized)
 
-
+import snowflake.connector
 my_cnx=snowflake.connector.connect
 my_cur=my_cun.cursor()
 my_cur.execute("select current_user(), current_account(), current_region()")
