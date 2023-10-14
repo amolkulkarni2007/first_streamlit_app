@@ -39,7 +39,7 @@ streamlit.dataframe(fruityvice_normalized)
 
 import snowflake.connector
 my_cnx=snowflake.connector.connect
-my_cur=my_cux.cursor()
+my_cur=my_cnx.cursor()
 my_cur.execute("select current_user(), current_account(), current_region()")
 my_date_row=my_cur.fetchone()
 streamlit.text("Hello Snopwflake")
