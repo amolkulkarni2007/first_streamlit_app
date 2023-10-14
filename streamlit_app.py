@@ -65,8 +65,8 @@ streamlin.stop()
 #streamlit.text("The fruit load list contains:")
 #stremlit.text(my_data_row)
 
-fruits_to_add=streamlit.text_input("What fruit would you like to add?")
+#fruits_to_add=streamlit.text_input("What fruit would you like to add?")
 
-streamlit.write("Thanks for adding fruit : " , fruits_to_add)
+#streamlit.write("Thanks for adding fruit : " , fruits_to_add)
 
-my_cur.execute("insert into fruit_load_list values('from_streamlit')")
+#my_cur.execute("insert into fruit_load_list values('from_streamlit')")
