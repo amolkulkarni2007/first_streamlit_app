@@ -33,7 +33,7 @@ try:
   streamlit.write('The use entered', fruit_choise)
   if not fruit_choise:
     streamlit.error("Please select a fruit to get information")
-  else
+  else:
     #New section to display fruityvice api response
     #import requests
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choise)
