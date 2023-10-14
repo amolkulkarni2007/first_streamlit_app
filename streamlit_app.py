@@ -36,3 +36,11 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_c
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # display the table format
 streamlit.dataframe(fruityvice_normalized)
+
+
+my_cnx=snowflake.connector.connect
+my_cur=my_cun.cursor()
+my_cur.execute("select current_user(), current_account(), current_region()")
+my_date_row=my_cur.fetchone()
+streamlit.text("Hello Snopwflake")
+streamlit.text(my_date_row)
