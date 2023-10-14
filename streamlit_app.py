@@ -53,3 +53,8 @@ streamlit.dataframe(my_data_row)
 #my_data_row=my_cur.fetchone()
 #streamlit.text("The fruit load list contains:")
 #stremlit.text(my_data_row)
+
+
+streamlit.text("What fruit would you like to add?")
+fruits_to_add=streamlit.text_input()
+streamlit.text("Thanks for adding fruits")
